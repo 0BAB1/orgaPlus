@@ -1,28 +1,17 @@
-import React, { Component } from "react";
+import React from "react";
+// Import our custom CSS
+import '../scss/styles.scss'
 
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link,
-  Redirect,
-} from "react-router-dom";
+// Import all of Bootstrap's JS
+import * as bootstrap from 'bootstrap'
 
-export default class HomePage extends Component {
-  constructor(props) {
-    super(props);
-  }
-
-  render() {
-    return (
-      <Router>
-        <Switch>
-          <Route exact path="/">
-            <p>This is the home page</p>
-          </Route>
-         
-        </Switch>
-      </Router>
-    );
-  }
+export default function HomePage(){
+  return(
+    <>
+      <div className="container py-4 px-3 mx-auto">
+        <h1>Hello world</h1>
+        <button class="btn btn-primary">Primary button</button>
+      </div>
+    </>
+  )
 }
